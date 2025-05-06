@@ -9,6 +9,7 @@ Library: C:\dev\SAP\SeGAR-2025\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_bu
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\dev\SAP\SeGAR-2025\Temp\Burst
+--debug=LineOnly
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\dev\SAP\SeGAR-2025\Library\Burst
 --output=C:\dev\SAP\SeGAR-2025\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
@@ -126,6 +127,7 @@ Library: C:\dev\SAP\SeGAR-2025\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_bu
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\dev\SAP\SeGAR-2025\Temp\Burst
+--debug=LineOnly
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\dev\SAP\SeGAR-2025\Library\Burst
 --output=C:\dev\SAP\SeGAR-2025\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
@@ -143,6 +145,7 @@ Library: C:\dev\SAP\SeGAR-2025\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_bu
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=C:\dev\SAP\SeGAR-2025\Temp\Burst
+--debug=LineOnly
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.57f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=C:\dev\SAP\SeGAR-2025\Library\Burst
 --output=C:\dev\SAP\SeGAR-2025\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated

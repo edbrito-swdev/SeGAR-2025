@@ -15,6 +15,7 @@ public class UGSBootstrap : MonoBehaviour
         if (!AuthenticationService.Instance.IsSignedIn)
         {
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
+            NetworkManager.Singleton.NetworkConfig.EnableSceneManagement = false;
             Debug.Log("Signed in: " + AuthenticationService.Instance.PlayerId);
             hostId.text = NetworkManager.Singleton.LocalClientId.ToString();
             NetworkManager.Singleton.OnClientConnectedCallback += HandleClientConnected;

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.Netcode;
+using UnityEngine.SceneManagement;
+
 public class ConnectToMultiplayer : MonoBehaviour
 {
     public TMP_InputField ipInputField;
@@ -17,14 +20,23 @@ public class ConnectToMultiplayer : MonoBehaviour
         
     }
 
-    public void ConnectToServer()
+    public async void ConnectToServer()
     {
         if (ipInputField != null)
         {
             if (manager != null)
             {
-                manager.JoinGame(ipInputField.text);
+                bool conn = await manager.JoinGame(ipInputField.text);
+                if (!conn)
+                {
+                    Debug.LogError("Failed to connect to server");
+                    return;
+                }
                 Debug.Log("Joined the game: " + ipInputField.text);
+                if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
+                {
+                    SceneManager.LoadScene("ARRelative", LoadSceneMode.Single);
+                }            
             }
             else
             {

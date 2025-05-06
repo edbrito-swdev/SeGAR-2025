@@ -45,7 +45,7 @@ public class MultiplayerManager : MonoBehaviour
         return gameCode;
     }
 
-    public async void JoinGame(string joinCode)
+    public async Task<bool> JoinGame(string joinCode)
     {
         // 1. Join Relay using join code
         JoinAllocation joinAlloc = await RelayService.Instance.JoinAllocationAsync(joinCode);
@@ -54,6 +54,6 @@ public class MultiplayerManager : MonoBehaviour
         utp.SetClientRelayData(joinAlloc.RelayServer.IpV4, (ushort)joinAlloc.RelayServer.Port, joinAlloc.AllocationIdBytes, joinAlloc.Key, joinAlloc.ConnectionData, joinAlloc.HostConnectionData);
 
         // 2. Start NGO client
-        NetworkManager.Singleton.StartClient();
+        return NetworkManager.Singleton.StartClient();
     }
 }
